@@ -1,4 +1,4 @@
-This is release 0.1 of Term::Size.
+This is alpha release 0.2 of Term::Size.
 
 Term::Size is a Perl module which provides a straightforward way to get
 the size of the terminal (or window) on which a script is running.
@@ -7,4 +7,4 @@ For installation instructions, see the file INSTALL.
 
 Tim Goodwin
 <tim@uunet.pipex.com>
-1997-04-23
+1997-05-13

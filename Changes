@@ -1,4 +1,7 @@
 Revision history for Perl extension Term::Size.
 
+0.2 1997-05-13
+	- support filehandle arguments
+
 0.1 1997-04-23
 	- original version

@@ -12,7 +12,7 @@ You need Perl 5.002 or later.
 
     make test
 
-You should see `ok 1' through to `ok 5', followed by a description of
+You should see `ok 1' through to `ok 6', followed by a description of
 the size of the terminal you are using.
 
 If any tests fail, please get in touch so we can sort out the problem.
@@ -33,5 +33,4 @@ people who can help me make Term::Size work on systems other than Unix.
 
 Tim Goodwin
 <tim@uunet.pipex.com>
-1997-04-23
-
+1997-05-13

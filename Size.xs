@@ -17,12 +17,14 @@ MODULE = Term::Size		PACKAGE = Term::Size
 PROTOTYPES: ENABLE
 
 void
-chars()
-	
-	PPCODE:
+chars( f = stdin )
+	FILE *f;
+
+	PREINIT:
 	struct winsize w;
 
-	if (ioctl(0, TIOCGWINSZ, &w) == -1)
+	PPCODE:
+	if (ioctl(fileno(f), TIOCGWINSZ, &w) == -1)
 		XSRETURN_NO;
 
 	XPUSHs(sv_2mortal(newSViv(w.ws_col)));
@@ -30,11 +32,13 @@ chars()
 		XPUSHs(sv_2mortal(newSViv(w.ws_row)));
 
 void
-pixels()
+pixels( f = stdin )
+	FILE *f;
 
-	PPCODE:
+	PREINIT:
 	struct winsize w;
 
+	PPCODE:
 	if (ioctl(0, TIOCGWINSZ, &w) == -1)
 		XSRETURN_NO;
 
