@@ -1,0 +1,9 @@
+Copyright
+Changes
+INSTALL
+MANIFEST
+Makefile.PL
+README
+Size.pm
+Size.xs
+test.pl
