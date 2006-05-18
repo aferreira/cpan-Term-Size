@@ -6,7 +6,11 @@ extern "C" {
 #include "perl.h"
 #include "XSUB.h"
 
+#ifndef _AIX
 #include <sys/termios.h>
+#else
+#include <termios.h>
+#endif
 
 #ifdef __cplusplus
 }
@@ -21,7 +25,7 @@ chars( f = stdin )
 	FILE *f;
 
 	PREINIT:
-	struct winsize w;
+	struct winsize w = { 0, 0, 0, 0 };
 
 	PPCODE:
 	if (ioctl(fileno(f), TIOCGWINSZ, &w) == -1)
@@ -36,7 +40,7 @@ pixels( f = stdin )
 	FILE *f;
 
 	PREINIT:
-	struct winsize w;
+	struct winsize w = { 0, 0, 0, 0 };
 
 	PPCODE:
 	if (ioctl(0, TIOCGWINSZ, &w) == -1)

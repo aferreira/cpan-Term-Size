@@ -6,4 +6,6 @@ Makefile.PL
 README
 Size.pm
 Size.xs
-test.pl
+#test.pl
+t/01_basic.t
+META.yml                                 Module meta-data (added by MakeMaker)

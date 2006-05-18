@@ -1,5 +1,15 @@
 Revision history for Perl extension Term::Size.
 
+0.201 2006-05-18
+	- 'test.pl' rewritten with Test::More and renamed to 't/01_basic.t'
+	- an initializer is now used when creating a struct winsize
+	  to avoid what looks like a bug on Cygwin: ioctl(., TIOCGWINSZ, .)
+	  does not set ws_xpixel and ws_ypixel fields, leaving them untouched.
+	  If they contained garbage, they kept the garbage
+	- attempt to restore AIX compatibility according to suggestion
+	  in CPAN RT #11539 (by jydawg [at] xs4all.nl): "termios.h" 
+	  is not where Unix thinks it should
+
 0.2 1997-05-13
 	- support filehandle arguments
 
