@@ -1,5 +1,8 @@
 Revision history for Perl extension Term::Size.
 
+0.202 2006-05-19
+	- inserted a note to say this is an UNOFFICIAL distribution
+
 0.201 2006-05-18
 	- 'test.pl' rewritten with Test::More and renamed to 't/01_basic.t'
 	- an initializer is now used when creating a struct winsize
