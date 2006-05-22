@@ -1,11 +1,15 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Term-Size
-version:      0.202
-version_from: Size.pm
-installdirs:  site
-requires:
+--- #YAML:1.0
+name:                Term-Size
+version:             0.203
+abstract:            Perl extension for retrieving terminal size (UNOFFICIAL PATCH)
+license:             perl
+generated_by:        ExtUtils::MakeMaker version 6.30_01
+author:              Tim Goodwin <tim@uunet.pipex.com>
+distribution_type:   module
+requires:     
+    Term::Size::Unix:              0
     Test::More:                    0
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30
+meta-spec:
+    url: <http://module-build.sourceforge.net/META-spec-new.html>;
+    version: 1.1
+dynamic_config: 1

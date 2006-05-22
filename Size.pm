@@ -1,17 +1,24 @@
 package Term::Size;
 
 use strict;
-use Carp;
 use vars qw(@EXPORT_OK @ISA $VERSION);
 
-use AutoLoader ();
-use DynaLoader ();
 use Exporter ();
 
-@ISA = qw(Exporter DynaLoader);
+@ISA = qw(Exporter);
 @EXPORT_OK = qw(chars pixels);
 
-$VERSION = '0.202';
+$VERSION = '0.203';
+
+BEGIN {
+
+if ($^O !~ /MSWIn32/) {
+    eval "use Term::Size::Unix qw(chars pixels);"
+} else {
+    eval "use Term::Size::Win32 qw(chars pixels);"
+}
+
+}
 
 =head1 NAME
 
@@ -106,8 +113,6 @@ Candidate for maintainership:
 Adriano Ferreira, <ferreira@cpan.org>, 2006-05-19.
 
 =cut
-
-bootstrap Term::Size $VERSION;
 
 1;
 

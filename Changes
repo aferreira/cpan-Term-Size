@@ -1,5 +1,14 @@
 Revision history for Perl extension Term::Size.
 
+0.203 2006-05-21
+	- bug fixed: &pixels always used fd 0 rather than fileno(f)
+	- experimental support for Win32 was introduced by
+	  adding a dependency on Term::Size::Win32
+	- added test scripts "t/00_use.t" and "t/99_pod.t"
+	- the XS code moved to distribution Term::Size::Unix -
+	  this module is now a thin skin to call the appropriate
+	  module Term::Size::Unix or Term::Size::Win32
+
 0.202 2006-05-19
 	- inserted a note to say this is an UNOFFICIAL distribution
 
