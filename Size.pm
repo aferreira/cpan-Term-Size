@@ -1,28 +1,21 @@
 package Term::Size;
 
 use strict;
+use Carp;
 use vars qw(@EXPORT_OK @ISA $VERSION);
 
+use AutoLoader ();
+use DynaLoader ();
 use Exporter ();
 
-@ISA = qw(Exporter);
+@ISA = qw(Exporter DynaLoader);
 @EXPORT_OK = qw(chars pixels);
 
-$VERSION = '0.203';
-
-BEGIN {
-
-if ($^O !~ /MSWIn32/) {
-    eval "use Term::Size::Unix qw(chars pixels);"
-} else {
-    eval "use Term::Size::Win32 qw(chars pixels);"
-}
-
-}
+$VERSION = '0.207';
 
 =head1 NAME
 
-Term::Size - Perl extension for retrieving terminal size (UNOFFICIAL PATCH)
+Term::Size - Retrieve terminal size (Unix version)
 
 =head1 SYNOPSIS
 
@@ -39,7 +32,7 @@ Term::Size - Perl extension for retrieving terminal size (UNOFFICIAL PATCH)
   HASN'T APPROVED IT (YET, I HOPE). BECAUSE OF THIS, THIS 
   DISTRIBUTION IS NOT INDEXED AND AVAILABLE VIA cpan OR cpanp 
   SHELLS UNLESS YOU EXPLICITLY SAY 
-  "install FERREIRA/Term-Size-0.202.tar.gz". 
+  "install FERREIRA/Term-Size-0.203.tar.gz". 
   
   THIS IS UNDELICATE? I THINK IT IS IN A CERTAIN SENSE. BUT IT 
   IS A WAY TO UNFREEZE THE CURRENT DISTRIBUTION STATUS. IF TIM 
@@ -113,6 +106,8 @@ Candidate for maintainership:
 Adriano Ferreira, <ferreira@cpan.org>, 2006-05-19.
 
 =cut
+
+bootstrap Term::Size $VERSION;
 
 1;
 
