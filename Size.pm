@@ -84,15 +84,23 @@ If the terminal size information is not available, the functions
 will normally return C<(0, 0)>, but this depends on your system.  On
 character only terminals, C<pixels> will normally return C<(0, 0)>.
 
-=head1 BUGS
+=head1 CAVEATS
 
-It only works on Unix systems.
+L<Term::Size> only works on Unix systems, as it relies on the
+C<ioctl> function to retrieve the terminal size. If you need
+terminal size in Windows, see L<Term::Size::Win32>.
 
 Before version 0.208, C<chars> and C<pixels> used to return false on error.
+
+=head1 SEE ALSO
+
+L<Term::Size::Any>, L<Term::Size::Perl>, L<Term::Size::ReadKey>, L<Term::Size::Win32>.
 
 =head1 AUTHOR
 
 Tim Goodwin, <tim@uunet.pipex.com>, 1997-04-23.
+
+=head1 MANTAINER
 
 Adriano Ferreira, <ferreira@cpan.org>, 2006-05-19.
 
