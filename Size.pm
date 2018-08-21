@@ -1,7 +1,6 @@
 package Term::Size;
 
 use strict;
-use Carp;
 use vars qw(@EXPORT_OK @ISA $VERSION);
 
 use DynaLoader ();
