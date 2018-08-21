@@ -12,6 +12,12 @@ use Exporter ();
 
 $VERSION = '0.207';
 
+bootstrap Term::Size $VERSION;
+
+1;
+
+=encoding utf8
+
 =head1 NAME
 
 Term::Size - Retrieve terminal size (Unix version)
@@ -25,7 +31,7 @@ Term::Size - Retrieve terminal size (Unix version)
 
 =head1 DESCRIPTION
 
-B<Term::Size> is a Perl module which provides a straightforward way to
+L<Term::Size> is a Perl module which provides a straightforward way to
 retrieve the terminal size.
 
 Both functions take an optional filehandle argument, which defaults to
@@ -41,7 +47,7 @@ list, that is, the terminal width.
 
 The functions may be imported.
 
-If you need to pass a filehandle to either of the C<Term::Size>
+If you need to pass a filehandle to either of the L<Term::Size>
 functions, beware that the C<*STDOUT{IO}> syntax is only supported in
 Perl 5.004 and later.  If you have an earlier version of Perl, or are
 interested in backwards compatibility, use C<*STDOUT> instead.
@@ -86,11 +92,6 @@ It only works on Unix systems.
 
 Tim Goodwin, <tim@uunet.pipex.com>, 1997-04-23.
 
-Candidate for maintainership:
 Adriano Ferreira, <ferreira@cpan.org>, 2006-05-19.
 
 =cut
-
-bootstrap Term::Size $VERSION;
-
-1;
