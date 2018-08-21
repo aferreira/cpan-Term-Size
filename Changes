@@ -1,6 +1,7 @@
 Revision history for Perl extension Term::Size.
 
-0.208 2018-08-20  Term-Size
+0.208 2018-08-20  Term-Size ( TRIAL VERSION )
+
     - use PerlIO instead of FILE* RT#38594
     - On error, Term::Size functions now return undef
       in scalar context, or an empty list on list context
