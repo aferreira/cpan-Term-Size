@@ -9,7 +9,7 @@ use Exporter ();
 @ISA = qw(Exporter DynaLoader);
 @EXPORT_OK = qw(chars pixels);
 
-$VERSION = '0.208';
+$VERSION = '0.209';
 
 bootstrap Term::Size $VERSION;
 
