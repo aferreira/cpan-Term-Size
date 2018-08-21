@@ -4,7 +4,6 @@ use strict;
 use Carp;
 use vars qw(@EXPORT_OK @ISA $VERSION);
 
-use AutoLoader ();
 use DynaLoader ();
 use Exporter ();
 
@@ -95,5 +94,3 @@ Adriano Ferreira, <ferreira@cpan.org>, 2006-05-19.
 bootstrap Term::Size $VERSION;
 
 1;
-
-__END__
