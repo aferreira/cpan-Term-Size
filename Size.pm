@@ -77,7 +77,8 @@ interested in backwards compatibility, use C<*STDOUT> instead.
 
 =head1 RETURN VALUES
 
-Both functions return C<undef> if there is an error.
+If there is an error, both functions return C<undef>
+in scalar context, or an empty list in list context.
 
 If the terminal size information is not available, the functions
 will normally return C<(0, 0)>, but this depends on your system.  On
@@ -86,6 +87,8 @@ character only terminals, C<pixels> will normally return C<(0, 0)>.
 =head1 BUGS
 
 It only works on Unix systems.
+
+Before version 0.208, C<chars> and C<pixels> used to return false on error.
 
 =head1 AUTHOR
 

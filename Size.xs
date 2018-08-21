@@ -29,7 +29,7 @@ chars( f = stdin )
 
 	PPCODE:
 	if (ioctl(fileno(f), TIOCGWINSZ, &w) == -1)
-		XSRETURN_NO;
+		XSRETURN(0);
 
 	XPUSHs(sv_2mortal(newSViv(w.ws_col)));
 	if (GIMME != G_SCALAR)
@@ -44,7 +44,7 @@ pixels( f = stdin )
 
 	PPCODE:
 	if (ioctl(fileno(f), TIOCGWINSZ, &w) == -1)
-		XSRETURN_NO;
+		XSRETURN(0);
 
 	XPUSHs(sv_2mortal(newSViv(w.ws_xpixel)));
 	if (GIMME != G_SCALAR)
