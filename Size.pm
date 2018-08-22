@@ -19,7 +19,7 @@ bootstrap Term::Size $VERSION;
 
 =head1 NAME
 
-Term::Size - Retrieve terminal size (Unix version)
+Term::Size - Retrieve terminal size on Unix
 
 =head1 SYNOPSIS
 
