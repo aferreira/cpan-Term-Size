@@ -104,4 +104,10 @@ Tim Goodwin, <tim@uunet.pipex.com>, 1997-04-23.
 
 Adriano Ferreira, <ferreira@cpan.org>, 2006-05-19.
 
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 1997-05-13 by Tim Goodwin.
+
+You may redistribute them under the same terms as Perl itself.
+
 =cut
