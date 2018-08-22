@@ -49,9 +49,13 @@ WriteMakefile(
         'Test::More' => 0,
     },
 ) : ()),
-($EUMM_VERSION < 6.6303 ? (
     PREREQ_PM => {
+        'strict'     => 0,
+        'DynaLoader' => 0,
+        'Exporter'   => 0,
+        'vars'       => 0,
+($EUMM_VERSION < 6.6303 ? (
         'Test::More' => 0,    # test
-    },
 ) : ()),
+    },
 );
