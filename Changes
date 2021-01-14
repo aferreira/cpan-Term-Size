@@ -1,5 +1,9 @@
 Revision history for Perl extension Term::Size.
 
+0.211     2021-01-14 Term-Size
+
+   - Promote to a stable release
+
 0.210     2021-01-07 Term-Size ( TRIAL VERSION )
 
    - Attempt to fix build at DragonFly BSD: include <termios.h> (like for AIX) rather than
